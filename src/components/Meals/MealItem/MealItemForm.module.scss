@@ -1,11 +1,13 @@
 .form {
   text-align: right;
+  width: 170px;
 }
 
 .form button {
   font: inherit;
   cursor: pointer;
-  background-color: #8a2b06;
+  // background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+  background-image: linear-gradient(to bottom right, #FD8451, #FFBD6F);
   border: 1px solid #8a2b06;
   color: white;
   padding: 0.25rem 2rem;
