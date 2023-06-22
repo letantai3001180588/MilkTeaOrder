@@ -12,7 +12,7 @@
 
 ## Live Application
 
-<!-- Click [here]() to go to the application. -->
+Click [here](https://milk-tea-shop-yvuk.onrender.com/) to go to the application.
 
 ## Installation
 
@@ -50,7 +50,7 @@ The project uses ReactJS, Redux, Typescript and Sass. It explores concepts of:
 
 ## Features
 
-The Food Order App Redux includes the following features:
+The Milk Tea Order App Redux includes the following features:
 
 1. Cart control for adding correctly amounts if item is already in cart.
 2. If item not in cart, add to it normally.
