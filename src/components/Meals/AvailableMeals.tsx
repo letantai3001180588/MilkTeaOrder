@@ -68,7 +68,7 @@ const AvailableMeals = () => {
   const [listDrink,setListDrink] = useState([])
 
   useEffect(()=>{
-    axios.get('http://localhost:8000/api/product/')
+    axios.get('https://milk-tea-shop-be.onrender.com/api/product/')
     .then((res)=>{
       setListDrink(res.data)
       console.log(res.data)

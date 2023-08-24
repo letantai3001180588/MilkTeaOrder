@@ -20,7 +20,7 @@ const Login = (props: any) => {
 
 
     const Signin=async()=>{
-        const response= await axios.post('http://localhost:8000/api/login/',{
+        const response= await axios.post('https://milk-tea-shop-be.onrender.com/api/login/',{
             username,password
         })
         console.log(response.data)
