@@ -1,6 +1,8 @@
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 import classes from "./AvailableMeals.module.scss";
+import { useEffect, useState } from "react";
+import axios from 'axios'
 
 const DUMMY_MEALS = [
   {
@@ -62,10 +64,24 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
+
+  const [listDrink,setListDrink] = useState([])
+
+  useEffect(()=>{
+    axios.get('http://localhost:8000/api/product/')
+    .then((res)=>{
+      setListDrink(res.data)
+      console.log(res.data)
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+  },[])
+
   const mealsList = (
     <ul>
-      {DUMMY_MEALS.map((meal) => (
-        <MealItem key={meal.id} item={meal} />
+      {listDrink.map((meal,i) => (
+        <MealItem key={i} item={meal} />
       ))}
     </ul>
   );

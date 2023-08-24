@@ -10,7 +10,7 @@ const Cart = (props: any) => {
   const mealState = useAppSelector((state) => state.meals);
   const meals = mealState.meals;
   const hasMeals = meals.length > 0;
-  const totalAmount = `$${mealState.totalAmount.toFixed(2)}`;
+  const totalAmount = `${mealState.totalAmount} đ`;
 
   const cartItemAddHandler = (meal: IMeal) => {
     dispatch(addMeal({ ...meal, amount: 1 }));
@@ -62,7 +62,7 @@ const Cart = (props: any) => {
           </button>
         )}
         {hasMeals && (
-          <button className={classes.button} onClick={props.onHideCart}>
+          <button className={classes.button} onClick={cartItemEmptyHandler}>
             Đặt hàng
           </button>
         )}

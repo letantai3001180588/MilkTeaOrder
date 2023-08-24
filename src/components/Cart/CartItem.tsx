@@ -2,16 +2,15 @@ import classes from "./CartItem.module.scss";
 
 const CartItem = (props: any) => {
   const item = props.item;
-  const price = `$${item.price.toFixed(2)}`;
 
   return (
     <li className={classes["cart-item"]}>
       <div style={{display:'flex',alignContent:'center'}}>
-        <img src={item.img} style={{width:5+'rem',height:5+'rem'}}/>
+        <img src={'http://localhost:8000'+item.image} style={{width:5+'rem',height:5+'rem'}}/>
         <div>
           <h2>{item.name}</h2>
           <div className={classes.summary}>
-            <span className={classes.price}>{price}</span>
+            <span className={classes.price}>{item.price} đ</span>
             <span className={classes.amount}>x {item.amount}</span>
           </div>
         </div>

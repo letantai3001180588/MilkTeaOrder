@@ -25,13 +25,15 @@ const HeaderCartButton = (props: any) => {
   }, [meals]);
 
   return (
-    <button className={btnClasses} onClick={props.onClick}>
-      <span className={classes.icon}>
-        <CartIcon />
-      </span>
-      <span>Giỏ hàng</span>
-      <span className={classes.badge}>{cartMealsCount}</span>
-    </button>
+    <div style={{display:'inline-block',marginRight:20}}>
+      <button className={btnClasses} onClick={props.onClick}>
+        <span className={classes.icon}>
+          <CartIcon />
+          <span className={classes.badge}>{cartMealsCount}</span>
+        </span>
+      </button>
+
+    </div>
   );
 };
 

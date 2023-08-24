@@ -5,12 +5,13 @@
   background-image: linear-gradient(to bottom right, #FF3E9D, #0E1F40);
   // background-image: linear-gradient(to bottom right, #FD8451, #FFBD6F);
   color: white;
-  padding: 0.75rem 3rem;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 25px;
   font-weight: bold;
+  position: relative;
 }
 
 .button:hover,
@@ -19,17 +20,20 @@
 }
 
 .icon {
-  width: 1.35rem;
-  height: 1.35rem;
-  margin-right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  // margin-right: 0.5rem;
 }
 
 .badge {
   background-color: #b94517;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 25px;
-  margin-left: 1rem;
+  position: absolute;
+  top:-10px;
+  left: 2rem;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .button:hover .badge,
@@ -58,4 +62,112 @@
   100% {
     transform: scale(1);
   }
+}
+
+$nav-height: .5em;
+
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  background-image: linear-gradient(to bottom right, #FF3E9D, #0E1F40);
+  border-radius: 12px;
+}
+
+.menu {
+  color: white;
+  margin-right: 0.5em;
+  position: relative;
+  width: 6rem;
+  padding: 1rem;
+}
+
+.menu__title {
+  display: block;
+  height: $nav-height;
+  line-height: $nav-height;
+  text-align: center;
+  // background-color: maroon;
+}
+
+.menu__items {
+  visibility: hidden;
+  overflow: hidden;
+  margin: 0;
+  padding: 10px 10px;
+  list-style: none;
+  background-color: aliceblue;
+  color: black;
+  transition: max-height 250ms;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: $nav-height;
+  left: 0;
+  min-width: 100%;
+  border-left: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 35px;
+}
+
+.menu__selector {
+  position: absolute;
+  top: 0;
+  left: -9001px;
+}
+
+.menu__selector:focus-visible ~ .menu__items {
+  max-height: 0em;
+
+}
+.menu__selector:focus ~ .menu__items {
+    visibility: visible;
+    margin-top: 35px;
+}
+
+.menu__selector:focus ~ .menu__title {
+  // background-color: #111;
+}
+.menu__item{
+  padding: 10px 5px;
+  border-radius: 4px;
+}
+.menu__item:hover{
+  background-color: #c6c7c8;
+}
+.menu__item a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 0.25em 1em;
+  transition: background-color 500ms;
+}
+.dropdown_divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(0,0,0,.15);
+}
+.menu__item a:hover {
+  color: white;
+  background-color: #111;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* ↓ Not part of the menu code. */
+.eyeman {
+  height: calc(100% - $nav-height);
+  background-color: beige;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.eyeman svg {
+  width: 100%;
 }

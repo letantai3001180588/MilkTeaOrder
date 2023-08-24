@@ -6,7 +6,6 @@ import MealItemForm from "./MealItemForm";
 const MealItem = (props: any) => {
   const dispatch = useAppDispatch();
   const meal = props.item;
-  const price = `$${meal.price.toFixed(2)}`;
 
   const addToCartHandler = (amount: number) => {
     const newMeal = {
@@ -20,11 +19,12 @@ const MealItem = (props: any) => {
     <li className={classes.meal}>
       <div style={{width:100+'%',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
         <div style={{width:100+'%',display:'flex',alignItems:'center'}}>
-          <img src={meal.img} style={{width:10+'rem',height:10+'rem'}}/>
+          <img src={'http://localhost:8000'+meal.image} style={{width:10+'rem',height:10+'rem'}}/>
+          
           <div>
             <h3>{meal.name}</h3>
             <div className={classes.description}>{meal.description}</div>
-            <div className={classes.price}>{price}</div>
+            <div className={classes.price}>{meal.price} đ</div>
           </div>
         </div>
 
