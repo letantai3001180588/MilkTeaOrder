@@ -6,7 +6,7 @@ const CartItem = (props: any) => {
   return (
     <li className={classes["cart-item"]}>
       <div style={{display:'flex',alignContent:'center'}}>
-        <img src={'http://localhost:8000'+item.image} style={{width:5+'rem',height:5+'rem'}}/>
+        <img src={'https://milk-tea-shop-be.onrender.com'+item.image} style={{width:5+'rem',height:5+'rem'}}/>
         <div>
           <h2>{item.name}</h2>
           <div className={classes.summary}>

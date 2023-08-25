@@ -19,7 +19,7 @@ const MealItem = (props: any) => {
     <li className={classes.meal}>
       <div style={{width:100+'%',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
         <div style={{width:100+'%',display:'flex',alignItems:'center'}}>
-          <img src={'http://localhost:8000'+meal.image} style={{width:10+'rem',height:10+'rem'}}/>
+          <img src={'https://milk-tea-shop-be.onrender.com'+meal.image} style={{width:10+'rem',height:10+'rem'}}/>
           
           <div>
             <h3>{meal.name}</h3>
