@@ -86,7 +86,7 @@ const deleteCookie=(cookieName:string)=> {
       </nav> */}
         <div className={btnClasses} style={{display:'inline-block'}}>
           <span>{items.username}</span>/
-          <span  onClick={logout}>Logout</span>
+          <span  onClick={logout}>Đăng xuất</span>
         </div>
 
       </>
